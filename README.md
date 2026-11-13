@@ -99,6 +99,11 @@ cd path/to/rc-rally-car && /Applications/FreeCAD.app/Contents/Resources/bin/free
 The car runs on a 2S LiPo battery. Charge it only with a balance charger at 0.3 A, never unattended, and don't use a
 puffed or damaged pack.
 
+## License
+
+[CC BY 4.0](LICENSE): you're free to print, build, change, remix and share this, even commercially. Just give credit:
+link back to this repo, and say if you changed anything.
+
 ## Credits
 
 The body shape is traced from the 1984 Audi Sport Quattro S1 blueprint by
