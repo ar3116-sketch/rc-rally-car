@@ -1,0 +1,647 @@
+{
+  "checks": {
+    "car_size_straight_mm": {
+      "value": [
+        151.5,
+        97.0,
+        65.82
+      ],
+      "limit": [
+        152.4,
+        101.6,
+        101.6
+      ],
+      "pass": true
+    },
+    "each_printed_part_fits_printer": {
+      "value": {
+        "Tub": true,
+        "Shell": true,
+        "Nose": true,
+        "Tail": true,
+        "Cabin": true,
+        "Glass": true,
+        "Wing": true,
+        "Splitter": true,
+        "Grille": true,
+        "ElectronicsTray": true,
+        "MotorStrap": true
+      },
+      "limit": [
+        256.0,
+        256.0,
+        256.0
+      ],
+      "pass": true
+    },
+    "printed_parts_single_valid_solid": {
+      "value": {
+        "Tub": [
+          1,
+          true
+        ],
+        "Shell": [
+          1,
+          true
+        ],
+        "Nose": [
+          1,
+          true
+        ],
+        "Tail": [
+          1,
+          true
+        ],
+        "Cabin": [
+          1,
+          true
+        ],
+        "Glass": [
+          1,
+          true
+        ],
+        "Wing": [
+          1,
+          true
+        ],
+        "Splitter": [
+          1,
+          true
+        ],
+        "Grille": [
+          1,
+          true
+        ],
+        "ElectronicsTray": [
+          1,
+          true
+        ],
+        "MotorStrap": [
+          1,
+          true
+        ]
+      },
+      "limit": "1 solid, valid, positive volume",
+      "pass": true
+    },
+    "shell_left_inside_cockpit_mm3": {
+      "value": 0.0,
+      "limit": "<= 0.01",
+      "pass": true
+    },
+    "canopy_cut_volume_error_pct": {
+      "value": 0.04,
+      "limit": "<= 1",
+      "pass": true
+    },
+    "static_interference_mm3": {
+      "value": {},
+      "limit": "none above 0.01",
+      "pass": true
+    },
+    "steering_sweep_clash_mm3": {
+      "value": {},
+      "limit": "none, real linkage, 1/3 to full lock both ways",
+      "pass": true
+    },
+    "horn_pin_stays_in_slot": {
+      "value": true,
+      "limit": "pin inside slot height and width, rod slide within nut gap",
+      "pass": true
+    },
+    "car_width_at_steering_lock_mm": {
+      "value": 100.67,
+      "limit": 101.6,
+      "pass": true
+    },
+    "front_wheel_min_gap_at_lock_mm": {
+      "value": 1.01,
+      "limit": ">= 0.5",
+      "pass": true
+    },
+    "removable_parts_come_off_clear": {
+      "value": {},
+      "limit": "no contact",
+      "pass": true
+    },
+    "wiring_clash_mm3": {
+      "value": {},
+      "limit": "none above 0.05",
+      "pass": true
+    },
+    "battery_lifts_out_with_tray_off": {
+      "value": {},
+      "limit": "no contact",
+      "pass": true
+    },
+    "motor_drops_into_cradle": {
+      "value": {},
+      "limit": "no contact",
+      "pass": true
+    },
+    "insert_wall_missing_mm3": {
+      "value": {},
+      "limit": "<= 0.2 inside the vendor minimum wall",
+      "pass": true
+    },
+    "thread_engagement_mm": {
+      "value": {
+        "tub z=21 at (-30.0, -5, 21.0)": 2.5,
+        "tub z=11.5 at (38.3, -16.7, 11.5)": 2.4,
+        "tub z=11.5 at (51.5, -3.5, 11.5)": 2.4,
+        "tray post at (-30.5, 11, 24.8)": 2.5,
+        "tray post at (-3.7, -11, 24.8)": 2.5,
+        "servo tower at (16, -19.5, 14.4)": 2.5,
+        "servo tower at (16, 8.5, 14.4)": 2.5,
+        "kingpin ear at (49.0, 28.0, 12.0)": 3.0,
+        "knuckle at (44.0, 32.5, 16.0)": 2.5,
+        "cabin post at (0.0, 16.5, 25.5)": 3.0,
+        "kingpin ear at (49.0, -28.0, 12.0)": 3.0,
+        "knuckle at (44.0, -32.5, 16.0)": 2.5,
+        "cabin post at (0.0, -16.5, 25.5)": 3.0
+      },
+      "limit": ">= 2.0",
+      "pass": true
+    },
+    "drive_force_margin": {
+      "value": 4.57,
+      "limit": ">= 1 (quarter stall force / rolling drag on a flat floor)",
+      "pass": true
+    },
+    "rear_wheel_gap_to_tub_mm": {
+      "value": 2.0,
+      "limit": ">= 2",
+      "pass": true
+    },
+    "rear_wheel_gap_to_shell_mm": {
+      "value": 2.5,
+      "limit": ">= 1",
+      "pass": true
+    },
+    "stl_files_watertight": {
+      "value": [],
+      "limit": "none leaking",
+      "pass": true
+    }
+  },
+  "notes": [
+    "upright fillets applied to 4 edges, volume +4.4 mm3"
+  ],
+  "parts": {
+    "Tub": {
+      "bbox_mm": [
+        130.0,
+        62.0,
+        25.2
+      ],
+      "volume_cm3": 29.8,
+      "solids": 1,
+      "valid": true
+    },
+    "Shell": {
+      "bbox_mm": [
+        120.0,
+        97.0,
+        43.0
+      ],
+      "volume_cm3": 25.8,
+      "solids": 1,
+      "valid": true
+    },
+    "Nose": {
+      "bbox_mm": [
+        12.5,
+        96.0,
+        40.0
+      ],
+      "volume_cm3": 7.7,
+      "solids": 1,
+      "valid": true
+    },
+    "Tail": {
+      "bbox_mm": [
+        14.5,
+        96.7,
+        39.5
+      ],
+      "volume_cm3": 12.1,
+      "solids": 1,
+      "valid": true
+    },
+    "Cabin": {
+      "bbox_mm": [
+        105.5,
+        80.0,
+        41.0
+      ],
+      "volume_cm3": 7.8,
+      "solids": 1,
+      "valid": true
+    },
+    "Glass": {
+      "bbox_mm": [
+        105.5,
+        80.0,
+        39.2
+      ],
+      "volume_cm3": 6.7,
+      "solids": 1,
+      "valid": true
+    },
+    "Wing": {
+      "bbox_mm": [
+        13.0,
+        86.0,
+        21.0
+      ],
+      "volume_cm3": 2.4,
+      "solids": 1,
+      "valid": true
+    },
+    "Splitter": {
+      "bbox_mm": [
+        18.0,
+        93.0,
+        9.5
+      ],
+      "volume_cm3": 4.4,
+      "solids": 1,
+      "valid": true
+    },
+    "Grille": {
+      "bbox_mm": [
+        2.5,
+        63.0,
+        16.9
+      ],
+      "volume_cm3": 1.5,
+      "solids": 1,
+      "valid": true
+    },
+    "ElectronicsTray": {
+      "bbox_mm": [
+        48.4,
+        27.3,
+        3.5
+      ],
+      "volume_cm3": 1.6,
+      "solids": 1,
+      "valid": true
+    },
+    "MotorStrap": {
+      "bbox_mm": [
+        18.6,
+        6.0,
+        1.5
+      ],
+      "volume_cm3": 0.2,
+      "solids": 1,
+      "valid": true
+    }
+  },
+  "trace_error_mm": {
+    "x=68": 0.6,
+    "x=61": -1.1,
+    "x=50": -0.3,
+    "x=26": -0.5,
+    "x=2": -0.2,
+    "x=-19": -0.5,
+    "x=-35": -0.0,
+    "x=-49": 0.0,
+    "x=-67": -0.6,
+    "x=-74": 0.6
+  },
+  "canopy_cut_mm3": {
+    "actual": 26178.5,
+    "expected": 26167.5
+  },
+  "steering": {
+    "inner_lock_deg": 25.0,
+    "outer_lock_deg": 21.64,
+    "kingpin_trail_mm": 5.0,
+    "arm_tip": [
+      38.91,
+      25.09
+    ],
+    "poses": {
+      "left 33%": {
+        "left_deg": 8.3,
+        "right_deg": 8.0,
+        "horn_deg": -12.9,
+        "pin_z": 20.35,
+        "pin_y_in_slot": -0.002,
+        "rod_dx": 0.11,
+        "rod_yaw_deg": -0.95
+      },
+      "left 67%": {
+        "left_deg": 16.7,
+        "right_deg": 15.2,
+        "horn_deg": -25.4,
+        "pin_z": 19.91,
+        "pin_y_in_slot": -0.014,
+        "rod_dx": 0.42,
+        "rod_yaw_deg": -1.91
+      },
+      "left 100%": {
+        "left_deg": 25.0,
+        "right_deg": 21.6,
+        "horn_deg": -37.8,
+        "pin_z": 19.22,
+        "pin_y_in_slot": -0.046,
+        "rod_dx": 0.91,
+        "rod_yaw_deg": -2.9
+      },
+      "right 33%": {
+        "left_deg": -8.0,
+        "right_deg": -8.3,
+        "horn_deg": 12.9,
+        "pin_z": 20.35,
+        "pin_y_in_slot": 0.002,
+        "rod_dx": 0.11,
+        "rod_yaw_deg": 0.95
+      },
+      "right 67%": {
+        "left_deg": -15.2,
+        "right_deg": -16.7,
+        "horn_deg": 25.4,
+        "pin_z": 19.91,
+        "pin_y_in_slot": 0.014,
+        "rod_dx": 0.42,
+        "rod_yaw_deg": 1.91
+      },
+      "right 100%": {
+        "left_deg": -21.6,
+        "right_deg": -25.0,
+        "horn_deg": 37.8,
+        "pin_z": 19.22,
+        "pin_y_in_slot": 0.046,
+        "rod_dx": 0.91,
+        "rod_yaw_deg": 2.9
+      }
+    },
+    "horn_deg_at_full_lock": 37.8
+  },
+  "wire_lengths_mm": {
+    "Wires_MotorToDriver": 94,
+    "Wires_BatteryToSwitch": 60,
+    "Wires_PowerBoardToDriver": 3,
+    "Wires_PowerBoardToRegulator": 4,
+    "Wires_SwitchToPowerBoard": 11,
+    "Wires_PowerBoardToNanoVIN": 44,
+    "Wires_RegulatorToServo": 21,
+    "Wires_NanoToShifter": 9,
+    "Wires_ServoCable": 11,
+    "Wires_DriverToNano": 29
+  },
+  "wiring_margin": {
+    "+0.5 mm radius": {
+      "Wires_MotorToDriver/Tub": 0.6,
+      "Wires_MotorToDriver/tie rod left lock": 0.51,
+      "Wires_PowerBoardToRegulator/Screws_M2": 0.29,
+      "Wires_PowerBoardToNanoVIN/Screws_M1p6_Nano": 0.24,
+      "Wires_NanoToShifter/Screws_M1p6_Nano": 0.72
+    },
+    "+1.0 mm radius": {
+      "Wires_MotorToDriver/Tub": 9.35,
+      "Wires_MotorToDriver/Shell": 22.13,
+      "Wires_MotorToDriver/TieRod": 3.76,
+      "Wires_MotorToDriver/Regulator": 0.86,
+      "Wires_MotorToDriver/Servo_9g": 3.25,
+      "Wires_MotorToDriver/ServoHornScrew": 1.08,
+      "Wires_MotorToDriver/tie rod left lock": 7.47,
+      "Wires_MotorToDriver/tie rod right lock": 0.91,
+      "Wires_PowerBoardToRegulator/Screws_M2": 1.99,
+      "Wires_PowerBoardToNanoVIN/Screws_M1p6_Nano": 1.49,
+      "Wires_RegulatorToServo/tie rod left lock": 0.32,
+      "Wires_NanoToShifter/ElectronicsTray": 2.08,
+      "Wires_NanoToShifter/Screws_M1p6_Nano": 3.22,
+      "Wires_ServoCable/Tub": 0.1,
+      "Wires_ServoCable/ElectronicsTray": 3.64,
+      "Wires_DriverToNano/tie rod right lock": 0.32
+    },
+    "+1.5 mm radius": {
+      "Wires_MotorToDriver/Tub": 31.89,
+      "Wires_MotorToDriver/Shell": 89.98,
+      "Wires_MotorToDriver/TieRod": 16.9,
+      "Wires_MotorToDriver/Battery_2S": 0.06,
+      "Wires_MotorToDriver/Regulator": 4.75,
+      "Wires_MotorToDriver/Servo_9g": 13.06,
+      "Wires_MotorToDriver/Screws_Cabin": 0.46,
+      "Wires_MotorToDriver/ServoHornScrew": 8.59,
+      "Wires_MotorToDriver/tie rod left lock": 22.14,
+      "Wires_MotorToDriver/tie rod right lock": 4.53,
+      "Wires_BatteryToSwitch/Tub": 0.97,
+      "Wires_PowerBoardToRegulator/Screws_M2": 6.54,
+      "Wires_PowerBoardToNanoVIN/TieRod": 1.86,
+      "Wires_PowerBoardToNanoVIN/Screws_M1p6_Nano": 3.17,
+      "Wires_PowerBoardToNanoVIN/tie rod right lock": 2.08,
+      "Wires_RegulatorToServo/tie rod left lock": 1.62,
+      "Wires_NanoToShifter/ElectronicsTray": 10.87,
+      "Wires_NanoToShifter/Servo_9g": 1.44,
+      "Wires_NanoToShifter/Screws_M1p6_Nano": 6.6,
+      "Wires_ServoCable/Tub": 7.06,
+      "Wires_ServoCable/ElectronicsTray": 18.41,
+      "Wires_DriverToNano/ElectronicsTray": 0.3,
+      "Wires_DriverToNano/tie rod right lock": 1.81
+    }
+  },
+  "headroom_mm": {
+    "nano_to_cabin": 4.72,
+    "regulator_to_shell": 18.45,
+    "driver_to_shell": 22.9
+  },
+  "hardware_counts": {
+    "M2 x 4 socket head": 5,
+    "M2 x 5 socket head": 4,
+    "M2 x 16 socket head": 2,
+    "M2 washer 5 OD x 0.3": 2,
+    "Round spacer 4 OD x 2.2 ID x 10 (M2)": 2,
+    "M3 x 12 socket head": 2,
+    "M3 washer 7 OD x 0.5": 2,
+    "Round spacer 5 OD x 3.2 ID x 9 (M3)": 2,
+    "M2 x 8 socket head": 2,
+    "M2 nylon lock nut": 2,
+    "M1.6 x 4 socket head": 4,
+    "M2 x 10 socket head": 1,
+    "683ZZ bearing 3 x 7 x 3": 2,
+    "Round spacer 5 OD x 3.2 ID x 4 (rear axle)": 2,
+    "M2 x 3 heat insert": 11,
+    "M3 x 3 short heat insert": 2
+  },
+  "mass": {
+    "total_g": 232.7,
+    "cg_mm": [
+      -6.5,
+      -0.2,
+      22.5
+    ],
+    "front_axle_load_pct": 45.1
+  },
+  "tipping": {
+    "tip_margin_at_top_speed_full_lock": 0.43,
+    "tip_margin_slow_mode_full_lock": 2.94,
+    "tip_speed_full_lock_m_s": 1.82,
+    "tire_grip_needed_to_tip": 1.71
+  },
+  "drive": {
+    "top_speed_no_load_m_s": 2.76,
+    "slow_mode_m_s": 1.06,
+    "time_constant_s": 0.31,
+    "stall_force_n": 2.08,
+    "needed_force_n": 0.11,
+    "tip_g": 1.71,
+    "turn_g": 3.949
+  },
+  "ground_clearance_mm": {
+    "tub": 6.0,
+    "splitter": 5.5
+  },
+  "all_pass": true,
+  "stl": {
+    "Shell": {
+      "watertight": true,
+      "volume_cm3": 25.78,
+      "triangles": 5882
+    },
+    "Nose": {
+      "watertight": true,
+      "volume_cm3": 7.66,
+      "triangles": 3378
+    },
+    "Tail": {
+      "watertight": true,
+      "volume_cm3": 12.11,
+      "triangles": 2494
+    },
+    "Cabin": {
+      "watertight": true,
+      "volume_cm3": 7.75,
+      "triangles": 2856
+    },
+    "Glass": {
+      "watertight": true,
+      "volume_cm3": 6.74,
+      "triangles": 4092
+    },
+    "Wing": {
+      "watertight": true,
+      "volume_cm3": 2.37,
+      "triangles": 648
+    },
+    "Splitter": {
+      "watertight": true,
+      "volume_cm3": 4.39,
+      "triangles": 2072
+    },
+    "Grille": {
+      "watertight": true,
+      "volume_cm3": 1.52,
+      "triangles": 92
+    },
+    "VentHoodL": {
+      "watertight": true,
+      "volume_cm3": 0.16,
+      "triangles": 66
+    },
+    "VentHoodR": {
+      "watertight": true,
+      "volume_cm3": 0.16,
+      "triangles": 66
+    },
+    "VentSideL": {
+      "watertight": true,
+      "volume_cm3": 0.07,
+      "triangles": 46
+    },
+    "VentSideR": {
+      "watertight": true,
+      "volume_cm3": 0.07,
+      "triangles": 46
+    },
+    "ElectronicsTray": {
+      "watertight": true,
+      "volume_cm3": 1.64,
+      "triangles": 2592
+    },
+    "MotorStrap": {
+      "watertight": true,
+      "volume_cm3": 0.16,
+      "triangles": 268
+    },
+    "Tub": {
+      "watertight": true,
+      "volume_cm3": 29.84,
+      "triangles": 8140
+    },
+    "KnuckleL": {
+      "watertight": true,
+      "volume_cm3": 0.69,
+      "triangles": 1520
+    },
+    "KnuckleR": {
+      "watertight": true,
+      "volume_cm3": 0.69,
+      "triangles": 1520
+    },
+    "TieRod": {
+      "watertight": true,
+      "volume_cm3": 0.8,
+      "triangles": 1008
+    },
+    "RimFL": {
+      "watertight": true,
+      "volume_cm3": 2.55,
+      "triangles": 1168
+    },
+    "RimFR": {
+      "watertight": true,
+      "volume_cm3": 2.55,
+      "triangles": 1168
+    },
+    "RimRL": {
+      "watertight": true,
+      "volume_cm3": 3.16,
+      "triangles": 856
+    },
+    "RimRR": {
+      "watertight": true,
+      "volume_cm3": 3.16,
+      "triangles": 856
+    },
+    "TireFL": {
+      "watertight": true,
+      "volume_cm3": 4.34,
+      "triangles": 7176
+    },
+    "TireFR": {
+      "watertight": true,
+      "volume_cm3": 4.34,
+      "triangles": 7176
+    },
+    "TireRL": {
+      "watertight": true,
+      "volume_cm3": 5.57,
+      "triangles": 7176
+    },
+    "TireRR": {
+      "watertight": true,
+      "volume_cm3": 5.57,
+      "triangles": 7176
+    },
+    "FitTest_print_this_first": {
+      "watertight": true,
+      "volume_cm3": 12.26,
+      "triangles": 3012
+    },
+    "ALT_Pinion_12T_m0.6_printed": {
+      "watertight": true,
+      "volume_cm3": 0.18,
+      "triangles": 1920
+    },
+    "ALT_AxleGear_17T_m0.6_printed": {
+      "watertight": true,
+      "volume_cm3": 0.51,
+      "triangles": 2892
+    }
+  }
+}
